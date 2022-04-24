@@ -4,5 +4,8 @@ from django.urls import path
 
 from .views import TransactionCRUDView
 urlpatterns = [
-    path('list/', TransactionCRUDView.as_view())
+    path('get_transactions/', TransactionCRUDView.as_view()),
+    path('add_transaction/', TransactionCRUDView.as_view()),
+
+    path('mark_paid/<int:pk>/', TransactionCRUDView.as_view()),
 ]
